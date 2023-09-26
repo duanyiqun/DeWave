@@ -1,4 +1,4 @@
-# DeWave-EEG-Translation
+# DeWave: Introducing discrete coding into EEG to text translation
 
 Codes will be update soon.
 
