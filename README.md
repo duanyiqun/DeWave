@@ -1,14 +1,19 @@
 # DeWave: Introducing discrete coding into EEG to text translation
 
-Codes will be update soon.
+Updates: As the baseline methods make a new claim of evaluation https://github.com/MikeWangWZHL/EEG-To-Text/issues/5, we are investigating this problem and its potential effects. 
 
 ## Citation
 ```shell
-To be revealed recently
+@inproceedings{duan2023dewave,
+  title={DeWave: Discrete Encoding of EEG Waves for EEG to Text Translation},
+  author={Duan, Yiqun and Zhou, Charles and Wang, Zhen and Wang, Yu-Kai and Lin, Chin-teng},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023}
+}
 ```
 
-This repo is the implementarion of paper xxx which discrete encoding (VQ-VAE) into EEG waves to text translation.
-Please refer to our paper for more technology details. The overview of the model structure is illustrated as below.
+This repo is the implementation of paper xxx which is a discrete encoding (VQ-VAE) into EEG waves to text translation.
+Please take a look at our paper for more technology details. The overview of the model structure is illustrated below.
 
 ![img.png](graph/model_dewave.png)
 
