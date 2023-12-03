@@ -1,6 +1,6 @@
 # DeWave: Introducing discrete coding into EEG to text translation
 
-Updates: As the baseline methods make a new claim of evaluation https://github.com/MikeWangWZHL/EEG-To-Text/issues/5, we are investigating this problem and its potential effects. 
+Updates: As the baseline methods make a new claim of evaluation https://github.com/MikeWangWZHL/EEG-To-Text/issues/5, we are investigating this problem https://github.com/duanyiqun/DeWave/issues/1 and its potential effects. 
 
 ## Citation
 ```shell
