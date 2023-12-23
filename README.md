@@ -1,6 +1,6 @@
 # DeWave: Introducing discrete coding into EEG to text translation
 
-Updates: As the baseline methods make a new claim of evaluation https://github.com/MikeWangWZHL/EEG-To-Text/issues/5, we are investigating this problem https://github.com/duanyiqun/DeWave/issues/1 and its potential effects. 
+Updates: As the baseline methods make a new claim of evaluation https://github.com/MikeWangWZHL/EEG-To-Text/issues/5, we are investigating this problem and its potential effects. We will update a new paper discussing the evaluation settings as well as possible solutions towards the right evaluation. 
 
 ## Citation
 ```shell
@@ -18,40 +18,6 @@ Please take a look at our paper for more technology details. The overview of the
 ![img.png](graph/model_dewave.png)
 
 This repo is based on the [EEG-to-Text](https://github.com/MikeWangWZHL/EEG-To-Text) codes & implementation. 
-
-## Data Preparation
-
-* Download raw data from ZuCo
-  * Download ZuCo v1.0 for 'task1-SR','task2-NR','task3-TSR' from https://osf.io/q3zws/files/ under 'OSF Storage' root,
-  unzip and move all .mat files to /dataset/ZuCo/task1-SR/Matlab_files,/dataset/ZuCo/task2-NR/Matlab_files,/dataset/ZuCo/task3-TSR/Matlab_files respectively.
-  * Download ZuCo v2.0 'Matlab files' for 'task1-NR' from https://osf.io/2urht/files/ under 'OSF Storage' root, unzip and move all .mat files to /dataset/ZuCo/task2-NR-2.0/Matlab_files.
-* Preparation scripts for eye fixation sliced data
-  * Modify the data paths and roots in [construct_dataset_mat_to_pickle_v1.py](util/construct_dataset_mat_to_pickle_v1.py) and [construct_dataset_mat_to_pickle_v2.py](util/construct_dataset_mat_to_pickle_v2.py)
-  * Run [scripts/data_preparation_freq.sh](scripts/data_preparation_freq.sh) for eye-tracking fixation sliced EEG waves. 
-* Preparation scripts for raw waves
-  * Modify the roots variable in  [scripts/data_preparation_wave.sh](scripts/data_preparation_wave.sh) and run the scripts, -r suggest the source root, -o denotes the output notes
-  ```python3 
-  ./util/construct_wave_mat_to_pickle_v1.py -t task3-TSR -r /projects/CIBCIGroup/00DataUploading/yiqun/bci -o /projects/CIBCIGroup/00DataUploading/yiqun/bci/ZuCo/dewave_sent
-  ```
-
-## Training
-
-### Eye fixation assisted translation
-Please refer to [train_codex_freq.py](train_codex_freq.py) and [train_translate_freq.py](train_translate_freq.py) respectively for codex self-supervise initializaiton and translation training. 
-Run scripts [scripts/train_codex_ss.sh](scripts/train_codex_ss.sh), [scripts/train_translate_codex.sh](scripts/train_translate_codex.sh) to train the model. 
-### Direct translation on raw waves
-Please notice that the training for raw waves are extremely memory consuming, try larger GPUs 
-Please refer to [train_translate_dewave.py](train_translate_dewave.py) for translation training. The self-supervised initialization will be released soon. 
-Run scripts [scripts/train_translate_codex_dewave.sh](scripts/train_translate_codex_dewave.sh) to train the model. 
-
-
-
-
-## Inference
-
-The model is trained and stored in checkpoints folder. 
-The evaluation scripts is in [eval_decoding_freq](eval_decoding_freq.py) for eye-tracking fixation and [eval_decoding_dewave](eval_decoding_dewave.py) for raw waves.
-After evaluation, the text results could be found in results such as [example](results/task2.0.txt) we uploaded.
 
 
 ## Results
