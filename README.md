@@ -1,8 +1,51 @@
-# DeWave: Introducing discrete coding into EEG to text translation
+# Some Exploration on EEG-to-Text Models
+
+
+## Towards Active EEG-to-Text Models. 
+Updates: April 2025
+
+To further find out more possibilities, we collect our **own data** with a degenerated setting, **roll back from open-set to closed-set**. For the dataset teaser, please see [dataset_teaser](https://studentutsedu-my.sharepoint.com/personal/jinzhao_zhou_student_uts_edu_au/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjinzhao%5Fzhou%5Fstudent%5Futs%5Fedu%5Fau%2FDocuments%2FUTS%5FSilentSpeech%5FEEG%2FTeaserData&ga=1) here. 
+
+<img width="434" alt="image" src="https://github.com/user-attachments/assets/8ca09637-c07f-49f8-ab9a-7e7381f460a7" />
+
+Model-wise, inspired by the LaBraM model, we decide to further train the next token prediction model to enhance time series capacity. 
+Meanwhile, we notice that the current public datasets are mostly passive data recorded by certain stimuli. We want to explore some **active** data, which is more relevant to real-life scenarios. Please see our new paper below for the newest progress: [Pretraining Large Brain Language Model for Active BCI](https://arxiv.org/pdf/2504.21214)  
+
+Project Page: [ActiveLBLM](https://duanyiqun.github.io/ActiveLBLM/)
+
+
+```shell
+@article{zhou2025pretraining,
+  title={Pretraining Large Brain Language Model for Active BCI: Silent Speech},
+  author={Zhou, Jinzhao and Cao, Zehong and Duan, Yiqun and Barkley, Connor and Leong, Daniel and Jiang, Xiaowei and Nguyen, Quoc-Toan and Zhao, Ziyi and Do, Thomas and Chang, Yu-Cheng and others},
+  journal={arXiv preprint arXiv:2504.21214},
+  year={2025}
+}
+```
+
+
+
+
+
+Updates: June 2024
+
+## Are EEG-to-Text Models Working?
+To evaluate whether the EEG-to-Text Model learns real patterns rather than relies on the LLM decoder, please see the new paper 
+[Are EEG-to-Text Models Working?](https://arxiv.org/pdf/2405.06459)
+```shell
+@article{jo2024eeg,
+  title={Are eeg-to-text models working?},
+  author={Jo, Hyejeong and Yang, Yiqian and Han, Juhyeok and Duan, Yiqun and Xiong, Hui and Lee, Won Hee},
+  journal={arXiv preprint arXiv:2405.06459},
+  year={2024}
+}
+```
+
+## DeWave: Introducing discrete coding into EEG to text translation
 
 Updates: As the baseline methods make a new claim of evaluation https://github.com/MikeWangWZHL/EEG-To-Text/issues/5, we are investigating this problem and its potential effects. We will update a new paper discussing the evaluation settings as well as possible solutions towards the right evaluation. 
 
-## Citation
+### Citation
 ```shell
 @inproceedings{duan2023dewave,
   title={DeWave: Discrete Encoding of EEG Waves for EEG to Text Translation},
@@ -20,7 +63,7 @@ Please take a look at our paper for more technology details. The overview of the
 This repo is based on the [EEG-to-Text](https://github.com/MikeWangWZHL/EEG-To-Text) codes & implementation. 
 
 
-## Results
+### Results
 
 Generated sample:
 
